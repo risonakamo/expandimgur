@@ -9,3 +9,54 @@
 {
     width: 100%;
 }
+
+#view .nano
+{
+    width: 532px;
+}
+
+#view .content
+{
+    position: initial;
+    width: 532px;
+}
+
+#view .content .item
+{
+    display: inline-block;
+    width: 100px;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+#view .content .center
+{
+    height: 100px;
+    padding-top: 37px;
+}
+
+#view .content .item tr
+{
+    width: 90px;
+}
+
+#view .content .item td
+{
+    display: inline-block;
+}
+
+#view .content .item .image
+{
+    width: 90px;
+}
+
+#view .content .item .image img
+{
+    width: 90px;
+    height: 90px;
+    line-height: initial;
+    margin: 0;
+    border-radius: 0;
+}
