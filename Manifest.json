@@ -1,0 +1,15 @@
+{
+    "manifest_version":2,
+    "name":"bigimgur",
+    "version":"1",
+    "description":"expand imgur tiles. ctrl+shift+s to sort by upload time descending",
+
+    "permissions":["tabs","http://*.imgur.com/*","contextMenus","https://*.imgur.com/*"],
+
+    "content_scripts":
+    [{
+        "matches":["http://*.imgur.com/*","https://*.imgur.com/*"],
+        "js":["jquery-3.1.0.min.js","expandimgur.js"],
+        "run_at":"document_end"
+    }]
+}
