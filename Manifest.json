@@ -1,6 +1,6 @@
 {
     "manifest_version":2,
-    "name":"bigimgur",
+    "name":"expandimgur",
     "version":"2.1",
     "description":"expand imgur tiles. ctrl+shift+s to sort by upload time descending",
 
@@ -14,7 +14,6 @@
     [{
         "matches":["http://*.imgur.com/*","https://*.imgur.com/*"],
         "js":["expandimgur.js"],
-        // "css":["expandimgur.css"],
         "run_at":"document_end"
     }]
 }
