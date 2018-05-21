@@ -60,3 +60,14 @@
     margin: 0;
     border-radius: 0;
 }
+
+.all-right-panel .all-page-upload-progress
+{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #1bb76e;
+    padding: 12px 0 12px 0;
+}
