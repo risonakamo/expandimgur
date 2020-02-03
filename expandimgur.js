@@ -13,6 +13,11 @@ class _iexpand
             {
                 this.sortTimeDesc();
             }
+
+            else if (e.key=="A" && e.ctrlKey==1 && e.shiftKey==1)
+            {
+                openCurrentAlbum();
+            }
         });
     }
 
@@ -24,6 +29,19 @@ class _iexpand
             this.descendingButton.click();
         },200);
     }
+}
+
+//attempts to determine the current album and opens the imgur gallery in a new tabs
+function openCurrentAlbum()
+{
+    var albumvalue=document.querySelector("#options input").value;
+
+    if (!albumvalue.length)
+    {
+        return;
+    }
+
+    window.open(`https://imgur.com/a/${albumvalue}`);
 }
 
 var iexpand=new _iexpand;
