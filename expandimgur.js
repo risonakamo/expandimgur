@@ -19,6 +19,8 @@ class _iexpand
                 openCurrentAlbum();
             }
         });
+
+        upresAlbumImgs();
     }
 
     sortTimeDesc()
@@ -42,6 +44,35 @@ function openCurrentAlbum()
     }
 
     window.open(`https://imgur.com/a/${albumvalue}`);
+}
+
+// attempt to target and upres the album images.
+function upresAlbumImgs()
+{
+    var res=document.querySelectorAll("#view .item img");
+
+    if (!res[0].src)
+    {
+        setTimeout(()=>{
+            upresAlbumImgs();
+        },3000);
+        return;
+    }
+
+    for (var x=0;x<res.length;x++)
+    {
+        // special link that should be ignored
+        if (res[x].src.search(/\.com\/.*\//)>=0)
+        {
+            continue;
+        }
+
+        // example: https://i.imgur.com/btesKIms.jpg
+        // match[1]=imgur id without "s" for small thumbnail (ie: btesKIm)
+        // match[2]=file extension (ie: .jpg)
+        var match=res[x].src.match(/\.com\/(.*)s(.*)/);
+        res[x].src=`https://i.imgur.com/${match[1]}b${match[2]}`
+    }
 }
 
 var iexpand=new _iexpand;

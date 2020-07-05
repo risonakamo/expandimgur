@@ -12,19 +12,19 @@
 
 #view .nano
 {
-    width: 532px;
+    width: 832px;
 }
 
 #view .content
 {
     position: initial;
-    width: 532px;
+    width: 832px;
 }
 
 #view .content .item
 {
     display: inline-block;
-    width: 100px;
+    width: 160px;
     margin: 0;
     padding: 5px;
     box-sizing: border-box;
@@ -39,7 +39,7 @@
 
 #view .content .item tr
 {
-    width: 90px;
+    width: 150px;
 }
 
 #view .content .item td
@@ -49,13 +49,13 @@
 
 #view .content .item .image
 {
-    width: 90px;
+    width: 150px;
 }
 
 #view .content .item .image img
 {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     line-height: initial;
     margin: 0;
     border-radius: 0;
